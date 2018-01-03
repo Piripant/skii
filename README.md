@@ -1,6 +1,8 @@
 # Skii
 Skii is a 2D top-down skiing game with a procedurally generated landscape and fully json constumizable assets.
 
+![Alt Text](recording.gif)
+
 ## Building
 Skii uses cargo, so compiling only consists in writing:
 
