@@ -1,0 +1,9 @@
+{
+    "type": "tile",
+    "properties": {
+        "texture": "icy_snow.png",
+        "forward_friction": 0.0,
+        "sideway_friction": 0.3,
+        "distribution": 0.07
+    }
+}

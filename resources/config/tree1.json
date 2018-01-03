@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "texture": "tree1.png",
+        "distribution": 0.06,
+        "hitbox": {
+            "width": 0.8,
+            "height": 1.0
+        }
+    }
+}

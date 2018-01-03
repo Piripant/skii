@@ -1,0 +1,6 @@
+{
+    "type": "player",
+    "properties": {
+        "texture": "player.png"
+    }
+}
