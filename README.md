@@ -11,12 +11,12 @@ If you want to directly play the game, you can also use:
 `cargo run --release`
 
 ## Dependecies
-Skii has only one non-cargo handled dependecy, SDL, derived from ggez. To find instruction on how to install it, you may want to read [this.](https://github.com/Rust-SDL2/rust-sdl2#user-content-requirements)
+Skii has only one non-cargo handled dependecy, SDL, derived from ggez. To find instruction on how to install SDL, you may want to read [this.](https://github.com/Rust-SDL2/rust-sdl2#user-content-requirements)
 
 ## Modding
 The game reads json file in `resources/config` to find info about the tiles, objects and player.
 
-There are three kinds of descriptions files, distiguisced by the `type` property: tiles, objects, and players.
+There are three types of description files: tile, object, and player.
 
 ### Tile
 * `type`: the file type
@@ -74,16 +74,16 @@ There are three kinds of descriptions files, distiguisced by the `type` property
 ```
 
 ## Generation
-The generation algorithms, (found in `src/generation.rs`) are cellular automata inspired, and modify the generation chance starting from the distrubution value in the json files.
+The generation algorithms, (found in `src/generation.rs`) are cellular automata inspired, and modify the generation chance starting from the distrubution value declared in the json files.
 
 ### Tiles
 ```
 if identical neighbors is between 1 and 3 => generating chance *= 2
-if identical neighbors is more than 3 => generating change /= 5
+if identical neighbors is more than 3 => generating chance /= 5
 ```
 ### Objects
 ```
 if objects in 3.0 radius are between 1 and 2 => generating chance *= 2
-if objects in 3.0 radius are more than 2 => generating change /= 6
+if objects in 3.0 radius are more than 2 => generating chance /= 6
 ```
-Note that the objects in range do not need to be the same as the object we are trying to generate
+Note that the `objects in range` do not need to be the same as the object we are considering to generate.
