@@ -97,7 +97,7 @@ impl ViewState {
     /// Draws the screen ui for when the player is dead
     fn draw_dead_ui(&mut self, ctx: &mut Context) -> GameResult<()> {
         let content = format!(
-            "You died after {:.2} meters! How unfortunate!",
+            "You crashed after {:.2} meters! How unfortunate!",
             self.world.real_y + self.world.player.position.y
         );
         let position = graphics::Point2::new(
